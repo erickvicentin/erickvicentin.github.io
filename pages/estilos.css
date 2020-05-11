@@ -1,0 +1,93 @@
+body {
+  background: #1e1f24;
+  color: #333;
+  text-align: center;
+  font-family: Arial;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 25px;
+  background-color: black;
+}
+
+#cabecera {
+  background: #4ba847;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#cabecera #logo {
+  width: 35px;
+  vertical-align: middle;
+}
+
+#cabecera #tagline {
+  padding: 0 0 0 1em;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+#container {
+  background-color: cornsilk;
+  width: 70%;
+  padding: 0;
+  text-align: left;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  text-align: justify;
+  border-radius: 10px;
+}
+
+#container h1 {
+  font-size: 24px;
+}
+
+#profile-photo {
+  width: 105px;
+  vertical-align: middle;
+  border-radius: 50px;
+}
+
+#post {
+  background: white;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#footer {
+  background-color: darkgray;
+  padding: 5px;
+  text-align: center;
+  font-size: 18;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#title {
+  margin: 50px;
+  margin-top: 30px;
+}
+
+.encabezado {
+  width: 80%;
+  float: right;
+}
+
+.photo {
+  width: 20%;
+  float: left;
+}
+
+.thanks {
+  text-align: center;
+}
