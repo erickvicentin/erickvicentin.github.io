@@ -8,7 +8,7 @@
       type="text/css"
     />
     <link
-      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -17,7 +17,37 @@
     <title>Pig Game</title>
   </head>
 
-  <body>
+  <body onload="showModal();">
+    <modal>
+      <div id="openModal" class="modalDialog">
+        <div>
+          <a
+            href="#close"
+            title="Close"
+            class="close"
+            onclick="javascript:CloseModal();"
+            >X</a
+          >
+          <h2 align="center">Reglas del juego</h2>
+          <p class="paraf" align="justify">
+            En el juego participarán 2 jugadores. Al tirar los dados se
+            acumularan puntos, los cuales pueden guardarse cediendo el turno de
+            tirar el dado al otro jugador, o seguir acumulandose con el riesgo
+            de que si el dado cae en 1 se pierden los puntos sin guardar, o al
+            sacar un 6 dos veces seguidas se pierde la totalidad de puntos
+            guardados, en ambos casos el turno de tirar el dado pasa a ser del
+            otro jugador.
+          </p>
+          <p class="paraf" align="justify">
+            El limite de puntos para ganar el juego <b>por defecto son 100</b>,
+            el cual unicamente se puede modificar antes de la primer tirada del
+            dado, por lo que no podrá cambiarlo hasta que inicie un nuevo juego.
+          </p>
+          <h2 class="paraf" align="center">¡Gracias por jugar!</h2>
+        </div>
+      </div>
+    </modal>
+
     <div class="wrapper clearfix">
       <div class="player-0-panel active">
         <div class="player-name" id="name-0">Player 1</div>
@@ -51,5 +81,15 @@
     </div>
 
     <script src="app.js"></script>
+    <script type="text/javascript">
+      function showModal() {
+        document.getElementById("openModal").style.display = "block";
+      }
+    </script>
+    <script type="text/javascript">
+      function CloseModal() {
+        document.getElementById("openModal").style.display = "none";
+      }
+    </script>
   </body>
 </html>

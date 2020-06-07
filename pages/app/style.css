@@ -86,7 +86,7 @@ body {
 }
 
 .active {
-  background-color: #f7f7f7;
+  background-color: #09c83273;
 }
 .active .player-name {
   font-weight: 300;
@@ -96,7 +96,7 @@ body {
   content: "\2022";
   font-size: 47px;
   position: absolute;
-  color: #eb4d4d;
+  color: #f50101b6;
   top: -7px;
   right: 10px;
 }
@@ -126,7 +126,7 @@ button {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  color: #555;
+  color: rgb(53, 52, 52);
   background: none;
   border: none;
   font-family: Lato;
@@ -145,7 +145,7 @@ button:hover i {
 }
 
 button:focus {
-  outline: none;
+  outline: #00d9ff;
 }
 
 i {
@@ -184,9 +184,66 @@ i {
 }
 
 .winner {
-  background-color: #f7f7f7;
+  background-color: #b0d410b7;
 }
 .winner .player-name {
   font-weight: 300;
   color: #eb4d4d;
+}
+
+.modalDialog {
+  position: fixed;
+  font-family: Lato;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: none;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 720px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #555);
+  background: -webkit-linear-gradient(#fff, #555);
+  background: -o-linear-gradient(#fff, #555);
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.close {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #00d9ff;
+}
+
+.paraf {
+  padding-top: 10px;
+  color: black;
+  font-family: Lato;
 }

@@ -39,6 +39,7 @@ function init() {
   document.querySelector(".player-0-panel").classList.remove("active");
   document.querySelector(".player-1-panel").classList.remove("active");
   document.querySelector(".player-0-panel").classList.add("active");
+  document.querySelector(".score-limit").disabled = false;
 }
 
 function change_player() {
@@ -46,6 +47,7 @@ function change_player() {
   // document.querySelector(".player-1-panel").classList.add("active");
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   roundScore = 0;
+  lastDice = 0;
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
   document.querySelector(".player-0-panel").classList.toggle("active");
@@ -58,6 +60,7 @@ function btn_roll() {
     // Variables
     var diceDOM = document.querySelector(".dice");
     var currentDOM = document.querySelector("#current-" + activePlayer);
+    document.querySelector(".score-limit").disabled = true;
 
     // Step 1: Obtain random number.
     var dice = Math.floor(Math.random() * 6) + 1;
@@ -122,4 +125,3 @@ function btn_hold() {
 document.querySelector(".btn-roll").addEventListener("click", btn_roll);
 document.querySelector(".btn-hold").addEventListener("click", btn_hold);
 document.querySelector(".btn-new").addEventListener("click", init);
-console.log(winningScore);
