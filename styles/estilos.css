@@ -47,7 +47,7 @@ body {
 }
 
 #profile-photo {
-  width: 105px;
+  width: 120px;
   vertical-align: middle;
   border-radius: 50px;
 }
@@ -75,6 +75,7 @@ body {
 
 .encabezado {
   width: 80%;
+  text-align: justify;
   float: right;
 }
 
@@ -94,4 +95,9 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.button__container {
+  text-align: center;
+  grid-column: 1;
 }
