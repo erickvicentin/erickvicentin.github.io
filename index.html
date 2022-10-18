@@ -40,14 +40,53 @@
             molestias sequi culpa atque odit repudiandae expedita quaerat error! Modi dolorum odio blanditiis, culpa
             earum excepturi unde quis.</p>
           <div class="tab-titles">
-            <p class="tab-links">Skills</p>
-            <p class="tab-links">Experience</p>
-            <p class="tab-links">Education</p>
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-content active-tab" id="skills">
+            <ul>
+              <li><span>Test Automation Engineer</span><br>Creating Test Cases</li>
+              <li><span>Devops</span><br>Implemented frameworks</li>
+              <li><span>Web UI developer</span><br>Development web applications</li>
+            </ul>
+          </div>
+          <div class="tab-content" id="experience">
+            <ul>
+              <li><span>October 2021 - Current</span><br>Test Automation Engineer SSr</li>
+              <li><span>March 2021 - September 2021</span><br>Test Automation Engineer Jr. Adv</li>
+              <li><span>September 2020 - February 2021</span><br>Test Automation Engineer Jr.</li>
+              <li><span>March 2020 - August 2020</span><br>Test Automation Engineer Trainee</li>
+              <li><span>December 2017 - March 2020</span><br>Customer Experience Support</li>
+            </ul>
+          </div>
+          <div class="tab-content" id="education">
+            <ul>
+              <li><span>System Information Engineering</span><br>Universidad Tecnologica Nacional</li>
+              <li><span>Natural Science - Bachelor</span><br>E.E.S. Nº 71 "Esteban Echeverria"</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
+  <script>
+
+    let tablinks = document.getElementsByClassName("tab-links")
+    let tabcontents = document.getElementsByClassName("tab-content")
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link")
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab")
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+
+  </script>
 </body>
 
 </html>
